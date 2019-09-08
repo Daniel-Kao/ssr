@@ -5,6 +5,11 @@ const defaultState = {
 
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
+    case 'newsList':
+      return {
+        ...state,
+        newsList: action.list,
+      };
     default:
       return state;
   }
